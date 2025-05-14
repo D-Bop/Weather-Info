@@ -42,5 +42,9 @@ const getWeather = async () => {
         console.log(error)
     }
 }
-
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter') {
+        getWeather();
+    }
+})
 searchBtn.addEventListener("click", getWeather);
